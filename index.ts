@@ -38,6 +38,8 @@ app.post('/', async (req, res) => {
     });
   }
 
+  await browser.close();
+
   if (pdf) {
     res.writeHead(200, {
       'Content-Type': 'application/pdf',
