@@ -35,6 +35,7 @@ app.post('/', async (req, res) => {
 
   let pdf: Buffer | undefined;
 
+  try {
     if (payload.url) {
       await page.goto(payload.url, { waitUntil: 'networkidle0' });
       pdf = await page.pdf(options);
@@ -55,6 +56,9 @@ app.post('/', async (req, res) => {
     } else {
       res.sendStatus(400);
     }
+  } catch (e) {
+    res.status(400).send(e?.message);
+  }
 });
 
 app.listen(port, () => console.log(`Peedy listening on port ${port}`));
