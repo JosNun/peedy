@@ -42,7 +42,8 @@ curl \
 
 ## Todo
 
-- [ ] Add npm command for debugging
+- [x] Add npm command for debugging
+  - [ ] VSCode debugger support?
 - [x] Pdf config options
 - [x] Read port from env variables
 - [ ] Tests
