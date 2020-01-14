@@ -4,16 +4,6 @@
 
 Peedy is a simple node project that turns a url or HTML string into a pdf document
 
-## Todo
-
-- [ ] Add npm command for debugging
-- [x] Pdf config options
-- [ ] Read port from env variables
-- [ ] Tests
-- [ ] Better Typing
-- [ ] Dockerize
-- [ ] Update Readme
-
 ## Installation
 
 TODO
@@ -43,6 +33,22 @@ curl \
 | url        | The url that Peedy should use to generate the PDF. Takes priority over htmlString.                                                                                  |
 | htmlString | A string of HTML to generate a PDF from. Can include CSS and JS.                                                                                                    |
 | pdfOptions | Options that get passed to puppeteer for generating the PDF. [See here for details.](https://github.com/puppeteer/puppeteer/blob/v2.0.0/docs/api.md#pagepdfoptions) |
+
+### Environment Variables
+
+| variable | Default | Description                           |
+| -------- | ------- | ------------------------------------- |
+| PORT     | 3546    | The port that 'Peedy should listen on |
+
+## Todo
+
+- [ ] Add npm command for debugging
+- [x] Pdf config options
+- [x] Read port from env variables
+- [ ] Tests
+- [ ] Better Typing
+- [ ] Dockerize
+- [ ] Update Readme
 
 ## Contributing
 

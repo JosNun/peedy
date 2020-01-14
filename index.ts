@@ -1,8 +1,7 @@
 import puppeteer, { PDFOptions } from 'puppeteer';
 import express from 'express';
 
-// TODO Get this from env variables
-const port = 3000;
+const port = process.env.PORT ?? 3546;
 
 const app = express();
 app.use(express.json());
