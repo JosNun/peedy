@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "start": "npm run serve",
     "serve": "node dist/server.js",
     "build": "tsc",
@@ -18,10 +18,15 @@
   },
   "devDependencies": {
     "@types/express": "^4.17.2",
+    "@types/jest": "^24.9.0",
     "@types/puppeteer": "^2.0.0",
+    "@types/supertest": "^2.0.8",
     "concurrently": "^5.0.1",
+    "jest": "^24.9.0",
     "nodemon": "^2.0.2",
     "puppeteer": "^2.0.0",
+    "supertest": "^4.0.2",
+    "ts-jest": "^24.3.0",
     "typescript": "^3.7.3"
   }
 }
