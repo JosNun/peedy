@@ -1,8 +1,6 @@
 import puppeteer, { PDFOptions } from 'puppeteer';
 import express from 'express';
 
-const port = process.env.PORT ?? 3546;
-
 const app = express();
 app.use(express.json());
 
@@ -60,4 +58,4 @@ app.post('/', async (req, res) => {
   }
 });
 
-app.listen(port, () => console.log(`Peedy listening on port ${port}`));
+export default app;
