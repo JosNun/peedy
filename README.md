@@ -46,6 +46,7 @@ curl \
   - [ ] VSCode debugger support?
 - [x] Pdf config options
 - [x] Read port from env variables
+- [ ] Add clean command
 - [ ] Tests
 - [ ] Better Typing
 - [ ] Dockerize
