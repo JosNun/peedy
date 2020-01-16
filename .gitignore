@@ -1,2 +1,17 @@
+# dependencies
+/node_modules
+
+# Production
+/dist
+
+# Testing
+/coverage
+
+# Editors
 *.vim
-dist/
+.vscode
+
+# misc
+.DS_Store
+
+npm-debug.log*
