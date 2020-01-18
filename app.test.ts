@@ -2,12 +2,36 @@ import request from 'supertest';
 import app from './app';
 
 describe('Test rendering a PDF from a url', () => {
-  test('It should respond with a PDF', async () => {
+  test('responds with a PDF given a url', async () => {
     const response = await request(app)
       .post('/')
       .send({
         // TODO: this should be a static site that is in the project
         url: 'https://example.com',
+      });
+
+    expect(response.status).toBe(200);
+    expect(response.header['content-type']).toBe('application/pdf');
+  });
+
+  test('responds with a PDF when given an HTML string', async () => {
+    const response = await request(app)
+      .post('/')
+      .send({
+        htmlString: `
+          <!DOCTYPE html>
+          <html lang="en">
+          <head>
+              <meta charset="UTF-8">
+              <meta name="viewport" content="width=device-width, initial-scale=1.0">
+              <meta http-equiv="X-UA-Compatible" content="ie=edge">
+              <title>Document</title>
+          </head>
+          <body>
+            Hey there!    
+          </body>
+          </html>
+      `,
       });
 
     expect(response.status).toBe(200);
