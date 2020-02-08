@@ -47,7 +47,7 @@ curl \
 - [x] Pdf config options
 - [x] Read port from env variables
 - [ ] Add clean command
-- [ ] Tests
+- [x] Tests
 - [ ] Better Typing
 - [ ] Dockerize
 - [ ] Update Readme
