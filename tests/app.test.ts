@@ -1,8 +1,8 @@
 import request from 'supertest';
-import app from './app';
+import app from '../app';
 
-describe('Test rendering a PDF from a url', () => {
-  test('responds with a PDF given a url', async () => {
+describe('Generating a PDF', () => {
+  test('when given a URL, respond with a PDF', async () => {
     const response = await request(app)
       .post('/')
       .send({
